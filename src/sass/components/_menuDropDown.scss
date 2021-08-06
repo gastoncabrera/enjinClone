@@ -1,0 +1,83 @@
+@include breakpoint(xl) {
+  .menu {
+    &__container {
+      display: flex;
+      height: 1.87rem;
+    }
+    &__container li {
+      display: flex;
+    }
+    &__dropDownProductTitle {
+      display: inline-block;
+      color: #434a60;
+      font-size: 1.25rem;
+      line-height: 1.5rem;
+      font-weight: 700;
+    }
+    &__dropDownProduct:hover .menu__dropDownProductImage {
+      transform: rotateX(180deg);
+    }
+    &__dropDownProduct {
+      display: flex;
+      flex-direction: column;
+      position: relative;
+      padding: 0 0.5rem;
+    }
+    &__dropDownProductImage {
+      width: 1.5rem;
+      height: 1.8rem;
+    }
+    &__dropDownProductContainer {
+      display: flex;
+    }
+    &__dropDownProduct:hover {
+      background-color: rgba(gray, 0.4);
+      cursor: pointer;
+    }
+    &__productContainer {
+      min-width: 20rem;
+      display: none;
+      flex-direction: column;
+      border: 1px solid $color-background;
+      background-color: white;
+      border-radius: 1rem;
+      padding: 1rem;
+      z-index: 30;
+    }
+    &__listItem {
+      display: flex;
+      align-items: flex-start;
+    }
+    &__listItem:hover {
+      opacity: 0.75;
+    }
+    &__dropDownProduct:hover .menu__productContainer {
+      display: flex;
+      position: absolute;
+      top: 2rem;
+    }
+  }
+  .plataforma {
+    &__image {
+      width: 1.7rem;
+      padding: 0.1rem 0.2rem;
+    }
+    &__container {
+      display: flex;
+    }
+    &__title {
+      font-weight: 700;
+      font-size: 1rem;
+      color: $color-font;
+    }
+    &__description {
+      font-weight: 400;
+      font-size: 0.9rem;
+      color: $color-font;
+      opacity: 0.75;
+    }
+  }
+  .listItem__container {
+    margin-left: 0.3rem;
+  }
+}

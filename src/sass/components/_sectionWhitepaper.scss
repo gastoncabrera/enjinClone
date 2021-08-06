@@ -1,0 +1,84 @@
+.sectionWhitepaper {
+  display: flex;
+  justify-content: center;
+  background-color: $color-background;
+  &__container {
+    max-width: 1024px;
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+    text-align: center;
+  }
+  &__content {
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  &__presentation {
+    font-size: 0.9rem;
+    font-weight: 700;
+    line-height: 1rem;
+    color: $color-font;
+  }
+  &__title {
+    @include title;
+    font-size: 1.7rem;
+    line-height: 2rem;
+  }
+  &__description {
+    @include subtitle;
+    margin-bottom: 3rem;
+  }
+  &__btn {
+    @include button;
+    margin: 0 auto;
+    padding: 13px 24px;
+    &:hover {
+      color: $color-fontSecondary;
+      opacity: 0.75;
+    }
+  }
+  &__image {
+    width: 90vw;
+    max-width: 540px;
+  }
+}
+@include breakpoint(xs) {
+  .sectionWhitepaper {
+    &__title {
+      font-size: 2.3rem;
+    }
+    &__description {
+      font-size: 1.2rem;
+    }
+    &__btn {
+      font-size: 1.2rem;
+      padding: 20px 30px;
+    }
+  }
+}
+@include breakpoint(lg) {
+  .sectionWhitepaper {
+    &__container {
+      flex-direction: row;
+      align-items: center;
+    }
+    &__content {
+      order: 2;
+    }
+    &__imageContainer {
+      order: 1;
+    }
+  }
+}
+@include breakpoint(xl) {
+  .sectionWhitepaper__presentation,
+  .sectionWhitepaper__title,
+  .sectionWhitepaper__description {
+    text-align: start;
+  }
+  .sectionWhitepaper__btn {
+    margin-left: 0;
+  }
+}

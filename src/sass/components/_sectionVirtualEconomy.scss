@@ -1,0 +1,64 @@
+.sectionVirtualEconomy {
+  display: flex;
+  justify-content: center;
+  padding: 1rem 0;
+  &__container {
+    display: flex;
+    flex-direction: column;
+  }
+  &__content {
+    margin: 0 auto;
+    max-width: 480px;
+  }
+  &__image {
+    width: 90%;
+    max-width: 480px;
+    margin: 0 auto;
+    display: flex;
+  }
+  &__title {
+    @include title;
+    font-size: 1.8rem;
+  }
+  &__description {
+    @include subtitle;
+  }
+  &__btn {
+    color: $color-primary;
+    font-size: 1rem;
+    font-weight: 700;
+    display: flex;
+    justify-content: center;
+    &:hover {
+      color: $color-primary;
+    }
+  }
+}
+@include breakpoint(sm) {
+  .sectionVirtualEconomy {
+    &__title {
+      font-size: 2.2rem;
+    }
+    &__btn {
+      font-size: 1.3rem;
+    }
+    &__description {
+      font-size: 1.3rem;
+    }
+  }
+}
+@include breakpoint(lg) {
+  .sectionVirtualEconomy__container {
+    flex-direction: row;
+    align-items: center;
+  }
+}
+@include breakpoint(xl) {
+  .sectionVirtualEconomy__title,
+  .sectionVirtualEconomy__description {
+    text-align: left;
+  }
+  .sectionVirtualEconomy__btn {
+    justify-content: flex-start;
+  }
+}

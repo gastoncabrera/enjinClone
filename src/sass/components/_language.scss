@@ -1,0 +1,40 @@
+.container {
+  &__language {
+    display: none;
+    z-index: 3;
+    left: -0.2rem;
+    top: 1.5rem;
+    height: 0;
+    width: 3rem;
+    position: absolute;
+    background-color: #fff;
+    border-radius: 0.2rem;
+  }
+  &__languageImages {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    border-radius: 2rem;
+  }
+}
+.navbar__languages:hover {
+  & .container__language {
+    display: flex;
+    justify-content: center;
+    height: 100%;
+    height: 8rem;
+    width: 2.5rem;
+    transition: 0.1s linear;
+  }
+  & .container__languageImages {
+    width: 2rem;
+    padding: 0 0.3rem;
+  }
+  & .languageImages {
+    height: 100%;
+    transition: 0.1s linear;
+  }
+}
+.languageImages:hover {
+  opacity: 0.75;
+}

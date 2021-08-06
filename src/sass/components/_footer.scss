@@ -1,0 +1,45 @@
+.footer {
+  padding: 2rem 0;
+  text-align: center;
+  background-color: $color-secondary;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1rem;
+  display: flex;
+  justify-content: center;
+  &__container {
+    max-width: 1024px;
+    width: 1024px;
+  }
+  &__containerLink {
+    display: flex;
+    flex-direction: column;
+  }
+  &__list {
+    list-style: none;
+    padding: 0;
+  }
+  &__link {
+    color: $color-fontSecondary;
+    opacity: 0.6;
+    &:hover {
+      color: $color-fontSecondary;
+      opacity: 1;
+    }
+  }
+  &__title {
+    margin: 0;
+    text-transform: uppercase;
+    color: $color-fontSecondary;
+    margin-bottom: 0.5rem;
+  }
+  &__item {
+    padding: 0.5rem 0;
+  }
+}
+@include breakpoint(lg) {
+  .footer__containerLink {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}

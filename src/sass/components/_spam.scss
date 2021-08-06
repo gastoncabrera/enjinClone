@@ -1,0 +1,66 @@
+.spam {
+  justify-content: center;
+  background-color: rgb(200, 232, 253);
+  display: flex;
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  background-position-x: 0px, 50%;
+  background-position-y: 0px, 0px;
+  background-image: linear-gradient(
+      180deg,
+      rgba(42, 43, 86, 0.5),
+      rgba(42, 43, 86, 0.5)
+    ),
+    url("https://assets-global.website-files.com/5d56cb37dc00725ec86984e3/5e99b7c7e09fceea32a48221_Platform%20Landing%20Page%20Steampunk.jpg");
+  &__container {
+    padding: 0.8rem 0.5rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    object-fit: cover;
+    width: 100%;
+    max-width: 1024px;
+  }
+  &__info {
+    width: 100%;
+    display: flex;
+    margin: 0 0.5rem;
+    font-size: 0.9rem;
+    color: white;
+    & a {
+      color: white;
+      padding: 0 0.2rem;
+      text-decoration: revert;
+    }
+  }
+  &__content button {
+    font-size: 1rem;
+  }
+  &__btn {
+    font-size: 1rem;
+    background-color: #33bfb4;
+    font-weight: 700;
+    border-radius: 0.3rem;
+    width: 6rem;
+    height: 2rem;
+    & a {
+      width: 100%;
+      height: 100%;
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      color: white;
+    }
+  }
+  &__close {
+    background-color: transparent;
+    border: none;
+    padding-right: 0;
+    & svg {
+      width: 100%;
+    }
+  }
+}
+.close {
+  display: none;
+}

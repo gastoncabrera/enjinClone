@@ -1,0 +1,3 @@
+@function get-opacity($color,$nivel){
+    @return rgba($color,$nivel)
+} 

@@ -1,0 +1,45 @@
+@mixin breakpoint($size) {
+  @if $size== "" {
+    @content;
+  } @else {
+    @media screen and (min-width: map-get($breakpoints, $size)) {
+      @content;
+    }
+  }
+}
+@mixin title {
+  padding: 0.5rem 0;
+  font-weight: 900;
+  line-height: 2.5rem;
+  color: $color-secondary;
+  text-align: center;
+}
+@mixin subtitle {
+  padding: 0.5rem 0.7rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5rem;
+  color: $color-font;
+  text-align: center;
+}
+@mixin button {
+  padding: 0.6rem 1.5rem;
+  border: 2px solid $color-primary;
+  border-radius: 0.3rem;
+  background-color: $color-primary;
+  color: $color-fontSecondary;
+  font-size: 1rem;
+  font-weight: 700;
+  line-height: 1rem;
+}
+@mixin newsBtn {
+  margin-top: 1rem;
+  font-size: 0.8rem;
+  font-weight: 500;
+  line-height: 1rem;
+  text-align: center;
+  color: $color-fontSecondary;
+  border: none;
+  border-radius: 0.3rem;
+  padding: 0.5rem;
+}
